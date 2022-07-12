@@ -1,4 +1,4 @@
-package com.astamatii.spring.springmvc_xml;
+package com.astamatii.spring.springmvc_annotation;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

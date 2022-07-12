@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.astamatii.spring</groupId>
-  <artifactId>springmvc_tests</artifactId>
+  <artifactId>springmvc_annotation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>springmvc_tests Maven Webapp</name>
+  <name>SpringMVC_Annotation Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -77,10 +77,19 @@
 	    <!--<scope>test</scope>-->
 	</dependency>
 
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <!--<scope>provided</scope>-->
+	</dependency>
+
+
 </dependencies>
 
   <build>
-    <finalName>springmvc_tests</finalName>
+    <finalName>springmvc_annotation</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
