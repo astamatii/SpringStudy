@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8">
 		<title>Spring MVC Annotation Home page</title>
@@ -8,7 +8,7 @@
 	
 		<h1>Spring MVC Annotation Tests</h1>
 		<h2>First Page</h2>
-		<p>Hello! This is first page.</p>
+		<p th:text="${message}"> This is first page.</p>
 		<a href="/springmvc_annotation">Go to Home Page</a>
 	
 	</body>
