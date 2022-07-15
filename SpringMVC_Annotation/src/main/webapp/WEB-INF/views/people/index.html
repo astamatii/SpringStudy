@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>People</title>
+	</head>
+	<body>
+		<h1>People List</h1>
+		
+		<!-- С помощью Thymeleaf перечисляем список people -->
+		<div th:each="person : ${people}">
+			<!-- Выводим имя человека и его ссылку для подробного просмотра -->
+			<a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a>
+		</div>
+	</body>
+</html>
