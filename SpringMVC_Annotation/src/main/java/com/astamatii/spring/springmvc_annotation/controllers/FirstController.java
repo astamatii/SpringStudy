@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -33,10 +34,5 @@ public class FirstController {
 		model.addAttribute("message", "Hello " + name + "!");
 		
 		return "first/firstpage";
-	}
-	
-	@GetMapping("/2")
-	public String secondpage() {
-		return "first/secondpage";
 	}	
 }

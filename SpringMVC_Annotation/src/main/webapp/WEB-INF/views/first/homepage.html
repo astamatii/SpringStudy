@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://thymeleaf.org">
 	<head>
 		<meta charset="UTF-8">
 		<title>Spring MVC Annotation Home page</title>
@@ -10,10 +10,9 @@
 		<h2>Home Page</h2>
 		<p th:text="${message}"/>
 		<a href="/springmvc_annotation/1">Go to First Page</a>
-		<a href="/springmvc_annotation/2">Go to Second Page</a>
-		<a href="/springmvc_annotation/second/about">Go to About Page</a>
-		<p><a href="/springmvc_annotation/1?name=kiki">Go to First Page with name parameter</a></p>
-		<p><a href="/springmvc_annotation/second/calc?a=5&action=/&b=2">Calculation of: 5 / 2</a></p>
+		<a href="/springmvc_annotation/1?name=kiki">Go to First Page with name parameter</a>
+		<p><a href="/springmvc_annotation/second/calc?a=5&action=/&b=2">Calculation of: 5 / 2</a>
+		<a href="/springmvc_annotation/second/about">Go to About Page</a></p>
 		<p><a href="/springmvc_annotation/people">People List</a></p>
 	</body>
 </html>

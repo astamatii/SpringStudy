@@ -6,11 +6,13 @@
 	</head>
 	<body>
 		<h1>People List</h1>
-		
+				
 		<!-- С помощью Thymeleaf перечисляем список people -->
 		<div th:each="person : ${people}">
 			<!-- Выводим имя человека и его ссылку для подробного просмотра -->
 			<a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a>
 		</div>
+		
+		<h2><a href="people/new">New Person</a></h2>
 	</body>
 </html>
