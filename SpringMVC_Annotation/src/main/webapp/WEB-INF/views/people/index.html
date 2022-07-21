@@ -10,9 +10,12 @@
 		<!-- С помощью Thymeleaf перечисляем список people -->
 		<div th:each="person : ${people}">
 			<!-- Выводим имя человека и его ссылку для подробного просмотра -->
-			<a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a>
+			<a th:href="@{/people/{id}(id=${person.getId()})}" 
+			th:text="${person.getName() + ', ' + person.getAge()}"></a>
 		</div>
-		
-		<h2><a href="people/new">New Person</a></h2>
+		<br/>
+		<form th:method="GET" th:action="@{/people/new}">
+			<input type="submit" value="New Person"/>
+		</form>
 	</body>
 </html>

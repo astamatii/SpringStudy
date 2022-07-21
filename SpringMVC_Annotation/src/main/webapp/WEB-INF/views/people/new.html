@@ -8,10 +8,23 @@
 	<!-- Form for POST-request method with Thymeleaf -->
 		<form th:method="POST" th:action="@{/people}" th:object="${person}">
 			<label for="name">Enter name: </label>
-			<input type="text" th:field="*{name}" id="name"/> <br/>
+			<input type="text" th:field="*{name}" id="name"/> 
+			<!-- #fields - мы получаем доступ к полям модели -->
+			<div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+			<br/>
+			<label for="age">Enter age: </label>
+			<input type="text" th:field="*{age}" id="age"/> 
+			<div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></div>
+			<br/>
+			<label for="email">Enter email: </label>
+			<input type="text" th:field="*{email}" id="email"/> 
+			<div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+			<br/>
 			<input type="submit" value="Create"/>
 		</form>
-		
+		<form th:method="GET" th:action="@{/people}">
+			<input type="submit" value="Cancel"/>
+		</form>
 		<!-- Old form for POST-request method -->
 		<!-- <form method="POST" action="/springmvc_annotation/people">
 			<label for="name">Enter name: </label>
