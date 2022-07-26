@@ -26,8 +26,8 @@ public class PersonDao {
 	//The object of the class that implements RowMapper created manually
 	private final PersonMapper personMapper;
 	//The object of the class that implements RowMapper given by spring.
-	//We can also use it when the column names of the table are same as
-	//field names of the class (name, id, age ...)
+	//We can also use it when the table columns	and class fields 
+	//has same names, position and amount (id, name, age, email)
 	private final BeanPropertyRowMapper<Person> beanPropertyRowMapper;
 	
 	@Autowired
