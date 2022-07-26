@@ -1,0 +1,20 @@
+CREATE TABLE Person(
+	id serial PRIMARY KEY,
+	name varchar,
+	age int,
+	email varchar);
+INSERT INTO Person VALUES
+(1, 'Tom', 5, 'tom@email.com'),
+(2, 'Jerry', 6, 'jerry@email.com'),
+(3, 'Kiki', 7, 'kiki@email.com'),
+(4, 'Will', 30, 'will@email.com');
+
+--create a new sequence that start with 1
+CREATE SEQUENCE serial AS integer START 1 OWNED BY person.id;
+--alter column and make it auto increment by that sequence
+ALTER TABLE person ALTER COLUMN id SET DEFAULT nextval('serial');
+--restart the sequence
+ALTER SEQUENCE serial RESTART WITH 1;
+--reset all values of id with that sequence
+UPDATE person SET id=nextval('serial');
+SELECT * FROM person;

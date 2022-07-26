@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/second")
+@RequestMapping("/")
 public class SecondController {
 	
 	@GetMapping("/about")
@@ -15,7 +15,7 @@ public class SecondController {
 		return "second/about";
 	}
 	
-	@GetMapping("/calc")
+	@GetMapping("calc")
 	public String calculator(@RequestParam("a") int a, 
 			@RequestParam("b") int b, 
 			@RequestParam("action") String action,

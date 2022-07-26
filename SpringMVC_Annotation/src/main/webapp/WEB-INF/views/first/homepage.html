@@ -9,10 +9,10 @@
 		<h1>Spring MVC Annotation Tests</h1>
 		<h2>Home Page</h2>
 		<p th:text="${message}"/>
-		<a href="/springmvc_annotation/1">Go to First Page</a>
-		<a href="/springmvc_annotation/1?name=kiki">Go to First Page with name parameter</a>
-		<p><a href="/springmvc_annotation/second/calc?a=5&action=/&b=2">Calculation of: 5 / 2</a>
-		<a href="/springmvc_annotation/second/about">Go to About Page</a></p>
-		<p><a href="/springmvc_annotation/people">People List</a></p>
+		<a th:href="@{/1}">Go to First Page</a>
+		<a th:href="@{/1?name=kiki}">Go to First Page with name parameter</a>
+		<p><a th:href="@{/calc?a=5&action=/&b=2}">Calculation of: 5 / 2</a>
+		<a th:href="@{/about}">Go to About Page</a></p>
+		<p><a th:href="@{/people}">People List</a></p>
 	</body>
 </html>

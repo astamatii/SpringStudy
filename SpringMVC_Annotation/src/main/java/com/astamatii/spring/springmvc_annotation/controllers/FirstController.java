@@ -5,13 +5,15 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+@RequestMapping("/")
 public class FirstController {
 
 	//Transfer
-	@GetMapping("/")
+	@GetMapping()
 	public String homepage(HttpServletRequest request, Model model) {
 		String name = request.getParameter("name");
 		String surname = request.getParameter("surname");
@@ -25,7 +27,7 @@ public class FirstController {
 		return "first/homepage";
 	}
 	
-	@GetMapping("/1")
+	@GetMapping("1")
 	public String firstpage(@RequestParam(value = "name", required = false) String name,
 			Model model) {
 		
